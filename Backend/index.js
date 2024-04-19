@@ -13,6 +13,7 @@ app.use(cors({
  credentials : true
 }
             ));
+mongoose.connect('mongodb+srv://gokulravi221600:<password>@cluster0.r20ki9s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 const{notFound, errorHandler} = require('./Middlewares/errorHandler');
 app.use(express.static('public'));
   // Initialize express app here
