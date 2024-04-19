@@ -11,10 +11,11 @@ const Signin = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    axios.defaults.withCredentials = true;
 const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post('http://localhost:3000/api/user/login', { email, password });
+        const response = await axios.post('https://healhubweb.vercel.app/login', { email, password });
         console.log('Login response:', response.data); // Log the response data
         const { role } = response.data;
         await dispatch(login({ email, password }));
