@@ -8,7 +8,7 @@ const cors = require('cors');
  
 const app = express();
 app.use(cors({
- origin : [""],
+ origin : ["https://healhubweb.vercel.app/"],
  methods : ["POST","GET"],
  credentials : true
 }
