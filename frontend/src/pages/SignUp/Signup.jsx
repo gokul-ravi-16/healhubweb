@@ -21,7 +21,7 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/api/user/register', userData);
+      const response = await axios.post('https://healhubweb.vercel.app/register', userData);
       setSuccessMessage('User registered successfully!');
       // You can optionally reset the form here if needed
     } catch (error) {
